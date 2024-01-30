@@ -9,7 +9,8 @@ public class CatEscapeGameDirector : MonoBehaviour
     public Image HPGauge;
     public bool gameOver=false;
 
-   
+
+
 
     public void DecreaseHp()
     {

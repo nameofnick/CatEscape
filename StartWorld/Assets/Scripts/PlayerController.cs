@@ -2,11 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private CatEscapeGameDirector gameDirector;
+    [SerializeField] private Button btnLeft;
+    [SerializeField] private Button btnRight;
+
+
     public float radius = 1f;
+
+
+    public void Start()
+    {
+        //this.btnLeft.onClick.AddListener(this.LeftButtonClick);
+        //this.btnRight.onClick.AddListener(this.RightButtonClick);
+        this.btnLeft.onClick.AddListener(() => { Debug.Log("왼쪽 화살표 버튼 클릭"); });
+        this.btnRight.onClick.AddListener(() => { Debug.Log("오른쪽 화살표 버튼 클릭"); });
+
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -37,6 +53,14 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(this.transform.position, this.radius);
+    }
+    public void LeftButtonClick()
+    {
+        Debug.Log("Left Button Click");
+    }
+    public void RightButtonClick()
+    {
+        Debug.Log("Right Button Click");
     }
 
 }
