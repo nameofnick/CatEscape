@@ -7,7 +7,8 @@ public class ItemDropGenerator : MonoBehaviour
     public GameObject applePrefab;
     public GameObject bombPrefab;
     private GameObject itemDrop;
-    private float delta;
+    private float delta = 0f;
+    //[SerializeField] private GameObject[] itemPrefabs;//배열로 하고싶을 시 사용
 
     // Start is called before the first frame update
     void Start()

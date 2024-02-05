@@ -7,11 +7,12 @@ public class BasketController : MonoBehaviour
     [SerializeField] private AudioClip appleSfx;
     [SerializeField] private AudioClip bombSfx;
     private AudioSource audioSource;
-
+    private GameObject basketGameController;
     // Start is called before the first frame update
     void Start()
     {
         this.audioSource = this.GetComponent<AudioSource>();
+        basketGameController = GameObject.Find("BasketGameController");
     }
 
     // Update is called once per frame

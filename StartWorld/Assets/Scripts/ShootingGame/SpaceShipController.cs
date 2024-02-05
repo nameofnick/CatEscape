@@ -32,6 +32,7 @@ public class SpaceShipController : MonoBehaviour
         
         float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float moveY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+
         transform.Translate(moveX, moveY, 0);
 
         //transform.Translate(new Vector2(moveX, moveY) * Time.deltaTime * moveSpeed);
